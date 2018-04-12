@@ -1,0 +1,17 @@
+<section class="content-header">
+    <h1>
+	Admins
+    </h1>
+    <ol class="breadcrumb">
+	<li><button ng-click="goBack()" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-circle-arrow-left"></span> Back</button></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    
+    <!-- Default box -->
+    <div ui-view="admin-list"></div>
+    <div ui-view="admin-detail"></div>
+    <div ui-view="admin-profile"></div>
+</section>

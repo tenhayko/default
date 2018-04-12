@@ -1,0 +1,239 @@
+/* 
+ * Fix carousel
+ */
+#carouselCar .carousel-indicators {
+	text-align: center;
+}
+#carouselCar .carousel-indicators li {
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    text-indent: 0px;
+    cursor: pointer;
+    background: none;
+    border: 0px solid #fff;
+    border-radius: 0px;
+}
+#carouselCar .carousel-indicators li:not(:last-child) {
+    padding-right: 120px;
+}
+#carouselCar .carousel-indicators li .circle{
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #168ccc;
+    border: 1px solid #168ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+#carouselCar .carousel-indicators .active {
+    color: #168ccc;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    text-indent: 0px;
+    cursor: pointer;
+    background: none;
+    border: 0px solid #fff;
+    border-radius: 0px;
+}
+#carouselCar .carousel-indicators{
+	top: 0px;
+}
+/*  */
+.why{
+	font-size: 25px;
+	text-align: center;
+	margin: 0px;
+	margin-bottom: 50px;
+}
+.text-justify{
+	text-align: justify;
+}
+.font-16{
+	font-size: 16px;
+}
+.icon-q img{
+	height: 37px;
+}
+.carousel-title{
+	font-size: 25px;
+	text-align: center;
+	margin: 0px;
+	margin-top: 70px;
+	margin-bottom: 60px;
+}
+.car-cap{
+	font-size: 25px;
+	color: #000;
+}
+#carouselCar .carousel-caption{
+	position: unset;
+	text-shadow: none;
+}
+.info-car{
+	text-align: center;
+	color: #000;
+	font-size: 18px;
+	margin-top: 30px;
+}
+.info-car span{
+	display: inline-block;
+}
+.info-car span:not(:last-child){
+	padding-right: 100px;
+}
+#content-d{
+	padding-top: 100px;
+	padding-bottom: 45px;
+}
+/*===================================*/
+#language-bar, #footer-copyright { 
+    background-color: #13254b;     
+    padding: 1px;
+}
+#language-bar a{ 
+    margin-right: 10%;
+    color: white;
+}
+
+#title-bar, #footer-logobar { 
+    background-color: #2aa8e2;
+    /*padding: 10px;*/
+}
+
+#title-bar img { 
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+#step-bar { 
+    background-color: #d9d9d9;
+}
+footer{
+	padding-top: 10px;
+}
+#footer-logobar .container{
+	padding-bottom: 10px;
+}
+#step-bar .step{ 
+    line-height: 89px;
+    height: 89px;
+    font-size: 20px;
+}
+
+#step-bar .step.active{ 
+    background-image: url('../images/tab-arrow.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#contacts { 
+    padding-top: 60px;
+}
+
+#contacts a{ 
+    background: #13254b;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    margin: 8px;
+}
+
+#contacts i{ 
+    font-size: 15px;
+    line-height: 27px;
+    color: white;
+}
+
+.btn-xl { 
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-hntrans { 
+    color: white;
+    border-radius: 0;
+    background-color: #168ccc;
+}
+
+.thank-message {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.payment-box {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.payment-checkbox {
+    font-size: 20px;
+    
+}
+
+.payment-checkbox label {
+    font-weight: 500;    
+}
+
+/* Base for label styling */
+[type="checkbox"] {
+    border-color: grey;
+    border-radius: 0;
+}
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.25em; height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: -7px;
+    left: 3px;
+    font-size: 1.8em;
+    line-height: 0.8;
+    color: #168ccc;
+    transition: all .2s;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+footer { 
+    color: white;
+}

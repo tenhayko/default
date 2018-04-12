@@ -1,0 +1,98 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTM-Avo
+FamilyName:UTM Avo
+StyleName:Regular
+FullName:UTM Avo
+MenuName:UTM Avo
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Designer - Hang\HN tranfer\HN tranfer - v3\Font\UTM Avo.ttf
+DataFormat:sfntData
+FileLength:39308
+FileModTime:1248943623
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTMAvoBold
+FamilyName:UTM Avo
+StyleName:Bold
+FullName:UTMAvoBold
+MenuName:UTM Avo
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\Designer - Hang\HN tranfer\HN tranfer - v3\Font\UTM AvoBold.ttf
+DataFormat:sfntData
+FileLength:39364
+FileModTime:1289323252
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTMAvo-BoldItalic
+FamilyName:UTM Avo
+StyleName:Bold Italic
+FullName:UTM Avo Bold Italic
+MenuName:UTM Avo
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:E:\Designer - Hang\HN tranfer\HN tranfer - v3\Font\UTM AvoBold_Italic.ttf
+DataFormat:sfntData
+FileLength:41260
+FileModTime:1289323388
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTMAvo-Italic
+FamilyName:UTM Avo
+StyleName:Italic
+FullName:UTM Avo Italic
+MenuName:UTM Avo
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:E:\Designer - Hang\HN tranfer\HN tranfer - v3\Font\UTM AvoItalic.ttf
+DataFormat:sfntData
+FileLength:41188
+FileModTime:1248950659
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:UTM-Sharnay
+FamilyName:UTM Sharnay
+StyleName:Italic
+FullName:UTM Sharnay
+MenuName:UTM Sharnay
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:E:\Designer - Hang\HN tranfer\HN tranfer - v3\Font\UTM Sharnay.ttf
+DataFormat:sfntData
+FileLength:37596
+FileModTime:1248954430
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#loader-wrapper {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 1000;
+		}
+		#loader {
+		    display: block;
+		    position: relative;
+		    left: 50%;
+		    top: 50%;
+		    width: 150px;
+		    height: 150px;
+		    margin: -75px 0 0 -75px;
+		    border-radius: 50%;
+		    border: 3px solid transparent;
+		    border-top-color: #275cab;
+		    border-bottom-color: #275cab;
+		    z-index: 1001;
+		    -webkit-animation: spin 2s linear infinite;
+		    -moz-animation: spin 2s linear infinite;
+		    -o-animation: spin 2s linear infinite;
+		    animation: spin 2s linear infinite;
+		}
+		#loader:before {
+		    content: "";
+		    position: absolute;
+		    top: 5px;
+		    left: 5px;
+		    right: 5px;
+		    bottom: 5px;
+		    border-radius: 50%;
+		    border: 3px solid transparent;
+		    border-top-color: #37B955;
+		    border-bottom-color: #37B955;
+		    -webkit-animation: spin 3s linear infinite;
+		    -moz-animation: spin 3s linear infinite;
+		    -o-animation: spin 3s linear infinite;
+		    animation: spin 3s linear infinite;
+		}
+		#loader:after {
+		    content: "";
+		    position: absolute;
+		    top: 15px;
+		    left: 15px;
+		    right: 15px;
+		    bottom: 15px;
+		    border-radius: 50%;
+		    border: 3px solid transparent;
+		    border-top-color: #f47b20;
+		    border-bottom-color: #f47b20;
+		    -webkit-animation: spin 1.5s linear infinite;
+		    -moz-animation: spin 1.5s linear infinite;
+		    -o-animation: spin 1.5s linear infinite;
+		    animation: spin 1.5s linear infinite;
+		}
+		.loader-logo {
+		    position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    width: 100px;
+		    height: 100px;
+		    -webkit-transform: translate(-50%,-50%);
+		    -moz-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		    transform: translate(-50%,-50%);
+		    z-index: 1001;
+		    opacity: 1;
+		    visibility: visible;
+		}
+		.loader-logo img {
+		    max-width: 100%;
+		    width: 99.99%;
+		}
+		#loader-wrapper .loader-section.section-left {
+		    left: 0;
+		}
+		#loader-wrapper .loader-section {
+		    position: fixed;
+		    top: 0;
+		    width: 51%;
+		    height: 100%;
+		    background: #fff;
+		    z-index: 1000;
+		    -webkit-transform: translateX(0);
+		    -moz-transform: translateX(0);
+		    -ms-transform: translateX(0);
+		    transform: translateX(0);
+		}
+		#loader-wrapper .loader-section.section-right {
+		    right: 0;
+		}
+		#loader-wrapper .loader-section {
+		    position: fixed;
+		    top: 0;
+		    width: 51%;
+		    height: 100%;
+		    background: #fff;
+		    z-index: 1000;
+		    -webkit-transform: translateX(0);
+		    -moz-transform: translateX(0);
+		    -ms-transform: translateX(0);
+		    transform: translateX(0);
+		}
+		@-webkit-keyframes spin {
+		    0% {
+		        -webkit-transform: rotate(0deg);
+		        -moz-transform: rotate(0deg);
+		        -ms-transform: rotate(0deg);
+		        transform: rotate(0deg)
+		    }
+		    100% {
+		        -webkit-transform: rotate(360deg);
+		        -moz-transform: rotate(360deg);
+		        -ms-transform: rotate(360deg);
+		        transform: rotate(360deg)
+		    }
+		}
+
+		@-moz-keyframes spin {
+		    0% {
+		        -webkit-transform: rotate(0deg);
+		        -moz-transform: rotate(0deg);
+		        -ms-transform: rotate(0deg);
+		        transform: rotate(0deg)
+		    }
+		    100% {
+		        -webkit-transform: rotate(360deg);
+		        -moz-transform: rotate(360deg);
+		        -ms-transform: rotate(360deg);
+		        transform: rotate(360deg)
+		    }
+		}
+
+		@-o-keyframes spin {
+		    0% {
+		        -webkit-transform: rotate(0deg);
+		        -moz-transform: rotate(0deg);
+		        -ms-transform: rotate(0deg);
+		        transform: rotate(0deg)
+		    }
+		    100% {
+		        -webkit-transform: rotate(360deg);
+		        -moz-transform: rotate(360deg);
+		        -ms-transform: rotate(360deg);
+		        transform: rotate(360deg)
+		    }
+		}
+
+		@keyframes spin {
+		    0% {
+		        -webkit-transform: rotate(0deg);
+		        -moz-transform: rotate(0deg);
+		        -ms-transform: rotate(0deg);
+		        transform: rotate(0deg)
+		    }
+		    100% {
+		        -webkit-transform: rotate(360deg);
+		        -moz-transform: rotate(360deg);
+		        -ms-transform: rotate(360deg);
+		        transform: rotate(360deg)
+		    }
+		}
+	</style>
+</head>
+<body>
+	
+	
+        <div id="loader-wrapper">
+          <div id="loader"></div>
+          <div class="loader-logo"><img src="lo-laod.png" alt="" style="border-radius: 50%;margin-top: 20px;margin-left: 17px;width: 70%;"></div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+      	</div> 
+ 
+
+</body>
+</html>

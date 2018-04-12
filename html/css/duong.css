@@ -1,0 +1,273 @@
+
+#language-bar a{ 
+    margin-right: 10%;
+    color: white;
+}
+
+#title-bar, #footer-logobar { 
+    background-color: #2aa8e2;
+    padding: 10px;
+}
+
+#title-bar img { 
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+#step-bar { 
+    background-color: #d9d9d9;
+}
+
+#step-bar .step{ 
+    line-height: 70px;
+    height: 70px;
+    font-size: 20px;
+}
+
+#step-bar .step.active{ 
+    background-image: url('../images/tab-arrow.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#contacts { 
+    padding-top: 60px;
+}
+
+#contacts a{ 
+    background: #13254b;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    margin: 8px;
+}
+
+#contacts i{ 
+    font-size: 15px;
+    line-height: 27px;
+    color: white;
+}
+
+.btn-xl { 
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-hntrans { 
+    color: white;
+    border-radius: 0;
+    background-color: #168ccc;
+}
+
+.btn-hntrans-info { 
+    border-radius: 0;
+    background-color: white;
+    border-color: #adadad;
+}
+
+.payment-body {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.booking-box {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.book-info-box {
+    border: 1px solid #818181;
+    margin-top: 30px;
+    padding: 16px;
+}
+
+.book-info-box b, .customer-info b{
+    font-family: UtmAvoBold;
+    font-weight: 500;
+}
+
+.book-info-from {
+    display: inline;
+    margin-right: 20px;
+}
+
+.book-info-to {
+    display: inline;
+    margin-left: 20px;
+}
+
+.booking-footer .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.payment-checkbox {
+    font-size: 20px;
+    
+}
+
+.payment-checkbox label {
+    font-weight: 500;    
+}
+
+.transfer-types + .transfer-types, .customer-info + .customer-info {
+    margin-top: 30px;
+}
+
+/* Base for label styling */
+[type="checkbox"] {
+    border-color: grey;
+    border-radius: 0;
+}
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.25em; height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: -7px;
+    left: 3px;
+    font-size: 1.8em;
+    line-height: 0.8;
+    color: #168ccc;
+    transition: all .2s;
+    font-family: Helvetica, Arial, sans-serif;
+}/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* Base for label styling */
+.tick[type="radio"] {
+    border-color: grey;
+    border-radius: 0;
+}
+.tick[type="radio"]:not(:checked),
+.tick[type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+.tick[type="radio"]:not(:checked) + label,
+.tick[type="radio"]:checked + label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+.tick[type="radio"]:not(:checked) + label:before,
+.tick[type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.25em; height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+.tick[type="radio"]:not(:checked) + label:after,
+.tick[type="radio"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: -7px;
+    left: 3px;
+    font-size: 1.8em;
+    line-height: 0.8;
+    color: #168ccc;
+    transition: all .2s;
+    font-family: Helvetica, Arial, sans-serif;
+}/* checked mark aspect changes */
+.tick[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+.tick[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.circle[type="radio"]:checked,
+.circle[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.circle[type="radio"]:checked + label,
+.circle[type="radio"]:not(:checked) + label{
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+.circle[type="radio"]:checked + label:before,
+.circle[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #818181;
+    border-radius: 100%;
+    background: #cdcdcd;
+}
+.circle[type="radio"]:checked + label:after,
+.circle[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #168ccc;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.circle[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.circle[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+footer { 
+    color: white;
+}

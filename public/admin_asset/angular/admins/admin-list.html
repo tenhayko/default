@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+		<h3 class="box-title">{{title}} <button style="margin-left: 30px" class="btn btn-primary btn-xs" ng-click="modal('add')">Thêm</button></h3>
+		
+		<div class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+			<input type="text" ng-model="searchkey" class="form-control pull-right" placeholder="Search">
+			
+			<div class="input-group-btn">
+			    <button type="submit" ng-click="getItems(currentPage,searchkey)" class="btn btn-default"><i class="fa fa-search"></i></button>
+			</div>
+                    </div>
+		</div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+		
+		<table class="table table-hover table-bordered" ng-init="getItems()">
+		    <tr>
+				<th style="width: 10px">#</th>
+				<th>Họ Tên</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Job</th>
+				<th style="width: 30px">Status</th>
+				<th style="width: 30px"></th>
+				<th style="width: 30px"></th>
+		    </tr>
+		    <tr ng-repeat="(key, item) in admins">
+				<td>{{ key + 1 }}</td>
+				<td>{{ item.name }}</td>
+				<td>{{ item.email }}</td>
+				<td>{{ item.phone }}</td>
+				<td>{{ item.job_title }}</td>
+				<td><span class="label label-success" ng-if="item.status==1">Active</span><span ng-if="item.status==0" class="label label-danger">Block</span></td>
+				<td><button type="button" class="btn btn-success btn-xs btn-block" ng-click="modal('edit', item.id)">Edit</button></td>
+				<td><button type="button" class="btn btn-danger btn-xs btn-block"  ng-click="confirmDelete(item.id)">Delete</button></td>
+		    </tr>
+		</table>		
+	    </div>
+	    <!-- ./box-body -->
+
+	    <pagination></pagination>
+	</div>
+	<!-- ./box -->
+    </div>
+    <!-- ./col-xs-12 -->
+</div>
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modalForm">
+    <div class="modal-dialog">
+	<div class="modal-content">
+	    <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title">{{ frmTitle }}</h4>
+	    </div>
+	    <div class="modal-body">
+		<form name="frmAdmin" class="form-horizontal">
+
+		    <div class="form-group"  ng-class="{'has-error': frmAdmin.name.$invalid && frmAdmin.name.$touched}">
+				<label for="inputEmail3" class="col-sm-3 control-label">Họ và tên</label>
+				<div class="col-sm-9">
+				    <input type="text" class="form-control" id="name" name="name" placeholder="Họ và tên" ng-model="admin.name" ng-required="true" />
+				    <div ng-show="frmAdmin.$submitted || frmAdmin.name.$touched">
+					<span class="help-block" ng-show="frmAdmin.name.$error.required">Không được để trống</span>
+				    </div>
+				</div>
+		    </div>
+			
+		    <div class="form-group"  ng-class="{'has-error': frmAdmin.phone.$invalid && frmAdmin.phone.$touched}">
+				<label for="inputEmail3" class="col-sm-3 control-label">Phone</label>
+				<div class="col-sm-9">
+				    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="admin.phone" ng-required="true" ng-pattern="/^[0-9]{10,11}$/" />
+				    <div ng-show="frmAdmin.$submitted || frmAdmin.phone.$touched">
+					<span id="helpBlock2" class="help-block" ng-show="frmAdmin.phone.$error.required">Không được để trống</span>
+					<span class="help-block" ng-show="frmAdmin.phone.$error.pattern">Số điện thoại không đúng định dạng</span>
+				    </div>
+				    <div ng-show="errors.phone != undefined">
+					<span class="help-block">{{ errors.phone[0] }}</span>
+				    </div>
+				</div>
+		    </div>
+			
+			<div ng-if="state=='add'" class="form-group"  ng-class="{'has-error': frmAdmin.email.$invalid && frmAdmin.email.$touched}">
+				<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+				<div class="col-sm-9">
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="admin.email" ng-required="true"/>
+				    <div ng-show="frmAdmin.$submitted || frmAdmin.email.$touched">
+						<span id="helpBlock2" class="help-block" ng-show="frmAdmin.email.$error.required">Không được để trống</span>
+				    </div>
+				    <div ng-show="errors.email != undefined">
+					<span class="help-block">{{ errors.email[0] }}</span>
+				    </div>
+				</div>
+		    </div>			
+
+		    <div class="form-group"  ng-class="{'has-error': frmAdmin.job_title.$invalid && frmAdmin.job_title.$touched}">
+				<label for="inputEmail3" class="col-sm-3 control-label">Job</label>
+				<div class="col-sm-9">
+				    <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Job" ng-model="admin.job_title" ng-required="true"/>
+				    <div ng-show="frmAdmin.$submitted || frmAdmin.job_title.$touched">
+						<span id="helpBlock2" class="help-block" ng-show="frmAdmin.job_title.$error.required">Không được để trống</span>
+				    </div>
+				</div>
+		    </div>
+			
+			<div ng-if="state=='add'" class="form-group" ng-class="{'has-error': frmAdmin.password.$invalid && frmAdmin.password.$touched}">
+				<label for="password" class="col-sm-3 control-label">Password</label>
+				<div class="col-sm-9">
+					<input class="form-control" ng-model="admin.password" type="password" name="password" placeholder="Password" required ng-minlength = 6>
+					<small class="help-block" ng-show="frmAdmin.password.$error.minlength && frmAdmin.password.$touched">Please must be atleast 6 characters.</small>
+				</div>
+			</div>
+
+			<div ng-if="state=='add'" class="form-group" ng-class="{'has-error': frmAdmin.confirm_password.$invalid && frmAdmin.confirm_password.$touched}">
+				<label for="confirm_password" class="col-sm-3 control-label">Confirm Password</label>
+				<div class="col-sm-9">
+					<input class="form-control" ng-model="admin.confirm_password" type="password" name="confirm_password" placeholder="Confirm Password" required password-verify="{{admin.password}}">
+					<small class="help-block" ng-show="frmAdmin.confirm_password.$error.passwordVerify && frmAdmin.confirm_password.$touched">No match!</small>
+				</div>
+			</div>
+
+		</form>
+	    </div>
+	    <div class="modal-footer">
+		<button type="button" class="btn btn-primary" ng-disabled="frmAdmin.$invalid" ng-click="save(state,id)">Lưu</button>
+	    </div>
+	</div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
